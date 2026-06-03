@@ -1,0 +1,150 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  font-family: sans-serif;
+}
+:root {
+  --passArea-Border: rgba(0, 0, 0, 0.278);
+}
+#container h1 {
+  text-align: center;
+}
+#container {
+  border-radius: 10px;
+  width: 500px;
+  height: 500px;
+  border: 2px solid;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  #finalPass {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    #passCopy {
+      align-self: center;
+      font-weight: bolder;
+      border-radius: 26px;
+      width: 57px;
+      height: 39px;
+      background: #0d9de3;
+      color: white;
+      text-transform: capitalize;
+      cursor: pointer;
+      box-shadow: 0 0 5px #0d9de3;
+      transition: transform 0.1s cubic-bezier(0.08, 0.82, 0.17, 1);
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .passArea {
+    border: 1px solid var(--passArea-Border);
+    box-shadow: inset 3px 4px 4px -3px var(--passArea-Border);
+    padding: 8px 15px;
+    display: flex;
+    border-radius: 110px;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+    align-self: center;
+    #password {
+      flex-grow: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    #passStateUpdate {
+      display: flex;
+      gap: 10px;
+      #passLevel {
+        padding: 4px 9px;
+        border-radius: 4px;
+        & > * {
+          flex-grow: 1;
+        }
+      }
+      button {
+        background: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  section form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-self: center;
+    h4 {
+      text-align: center;
+    }
+    .passLength {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      div {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        .passInc-dec {
+          height: 30px;
+          aspect-ratio: 1;
+          border: 1px solid black;
+          background: none;
+          border-radius: 100px;
+          text-align: center;
+          align-content: center;
+          font-size: 1.3rem;
+          cursor: pointer;
+          transition:
+            background,
+            transform 0.1s ease;
+          &:hover {
+            background: black;
+            transform: scale(1.2);
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  #charSetter {
+    display: flex;
+    justify-content: space-around;
+    div {
+      display: flex;
+      gap: 5px;
+      user-select: none;
+    }
+  }
+}
+.weak {
+  background: red;
+  color: black;
+}
+.medium {
+  background: lightcoral;
+}
+.strong {
+  background: lightgreen;
+}
+.veryStrong {
+  background: green;
+  width: 108px !important;
+  color: white;
+}

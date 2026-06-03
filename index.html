@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Password Generator</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./src/style.css" />
+    <!-- <link rel="icon" href="/" /> -->
+    <script type="module" defer src="./src/main.ts"></script>
+  </head>
+  <body>
+    <main id="container">
+      <h1>Random Password Generator</h1>
+      <section id="finalPass" aria-label="generated password">
+        <div class="passArea" aria-label="generated password area">
+          <p id="password" aria-label="password"></p>
+          <div id="passStateUpdate">
+            <strong id="passLevel" class="medium" aria-label="level of password"
+              >Good</strong
+            >
+            <button
+              data-action="update"
+              class="passUpdate"
+              aria-label="create different password"
+            >
+              <i
+                data-parent="button"
+                aria-hidden="true"
+                class="fa-solid fa-sync"
+              ></i>
+            </button>
+          </div>
+        </div>
+        <button id="passCopy" data-action="copy" aria-label="copy password">
+          copy
+        </button>
+      </section>
+      <section aria-label="action to create password">
+        <form>
+          <div class="passLength" aria-label="password length controller">
+            <label for="passRange" id="lengthView"
+              >Password length: <strong>8</strong></label
+            >
+            <div id="increaser">
+              <button
+                class="passInc-dec"
+                aria-label="decrease length of password"
+                type="button"
+                data-action="decrease"
+              >
+                -
+              </button>
+              <input type="range" id="passRange" min="1" max="50" value="8" />
+              <button
+                class="passInc-dec"
+                aria-label="increase length of password"
+                type="button"
+                data-action="increase"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <h4>Characters used:</h4>
+          <div id="charSetter" aria-label="type of char in password">
+            <div aria-label="bigCaps chars">
+              <input
+                checked
+                type="checkbox"
+                data-charType="upperCase"
+                id="bigCaps"
+              /><label for="bigCaps">ABC</label>
+            </div>
+            <div aria-label="smallCaps chars">
+              <input
+                checked
+                type="checkbox"
+                id="smallCaps"
+                data-charType="lowerCase"
+              /><label for="smallCaps">abc</label>
+            </div>
+            <div aria-label="number chars">
+              <input
+                checked
+                type="checkbox"
+                id="number"
+                data-charType="number"
+              /><label for="number">123</label>
+            </div>
+            <div aria-label="symbols chars">
+              <input
+                type="checkbox"
+                id="symbols"
+                data-charType="symbols"
+              /><label for="symbols">#$&</label>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
