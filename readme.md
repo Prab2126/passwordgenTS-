@@ -7,7 +7,7 @@ In this project password got animated when every changed with any button.
 
 Or
 
-## To use this project
+## Use project locally
 
 If having git then ok if not then first install git on your system.
 
