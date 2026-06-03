@@ -3,6 +3,10 @@
 This is my second project made in TS which help to make my logic more clear in TS.
 In this project password got animated when every changed with any button.
 
+## use Demo
+
+Or
+
 ## To use this project
 
 If having git then ok if not then first install git on your system.
